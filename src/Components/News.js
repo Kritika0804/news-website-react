@@ -21,7 +21,7 @@ const News = () => {
   }, );
 
   return (
-    <div className="grid gap-10 lg:grid-cols-3 px-10 ">
+    <div className="grid gap-10 lg:grid-cols-3 px-10 pb-11">
       {New.map((a, key) => (
         
         <div className="w-full rounded-lg shadow-md lg:max-w-sm px-5 py-10 bg-slate-100" key={key}>
@@ -31,17 +31,17 @@ const News = () => {
                             alt="image"
                         />
                         <div className="p-4">
-                            <h4 className="text-xl font-semibold text-blue-600">
+                            {/* <h4 className="text-xl font-semibold text-blue-600">
                                 
                                 {a.title}
-                            </h4>
+                            </h4> */}
                             <p className="mb-2 leading-normal">
                             {a.heading}
                             </p>
                             {/* <a  className="px-4 py-2 text-sm text-blue-100 bg-blue-500 rounded shadow">
                                 Read more
                             </a> */}
-                            <Link className="link text-blue-500" to={`/newsdetails`} >Read more</Link>
+                            <Link className="link text-blue-500" to={`/newsdetails/${a.id}`} >Read more</Link>
                         </div>
                         <div>
                         

@@ -3,6 +3,7 @@ import Navbar from './Components/Navbar';
 import News from './Components/News';
 import { BrowserRouter, BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Newsdetails from './Components/Newsdetails';
+import Footer from './Components/Footer';
 
 
 
@@ -13,7 +14,7 @@ function App() {
 
  
   return (
-    <div>
+    <div >
       
       <header className="text-center pb-11">
       <Navbar/>
@@ -23,12 +24,13 @@ function App() {
       <div>
         <Routes>
           <Route exact path="/" element={<News/>} />
-          <Route exact path="/newsdetails" element={<Newsdetails/>} />
+          <Route exact path="/newsdetails/:id" element={<Newsdetails/>} />
         </Routes>
       </div>
     
     </BrowserRouter>
       {/* <News/> */}
+      <Footer/>
     </div>
   );
 }
